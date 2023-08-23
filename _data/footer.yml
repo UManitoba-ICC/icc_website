@@ -1,0 +1,15 @@
+# This file allows us to add or delete navigation links in the footer bar
+left_links:
+- name: About
+  link: /about/
+- name: Events
+  link: /events/
+- name: Team
+  link: /team/
+- name: Resources
+  link: /resources/
+right_links:
+  - name:
+    link: https://www.instagram.com/umanitoba_icc/
+    social_icon: Instagram
+    new_window: true

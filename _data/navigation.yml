@@ -1,0 +1,9 @@
+# Header navigation links now in default.html in _layouts folder
+# - name: About
+#   link: /about/
+# - name: Events
+#   link: /events/
+# - name: Team
+#   link: /team/
+# - name: Contact
+#   link: /contact/

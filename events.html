@@ -1,0 +1,116 @@
+---
+title: Events
+description: Keep up with the latest events.
+top-image: /AsperMISA/images/background_events.png
+bottom_image: https://www.fg-a.com/backgrounds/black-planet-surface-1920.jpg
+---
+<!-- This file allows us to customize the layout of the events page. -->
+<section class="hero" style="background-image: url({{ site.baseurl }}/images/background/background_team.jpg)">
+    <div class="inner-hero text-container">
+        <div class="hero-text-container">
+            <h1 class="editable" style="font-size: 5.8em; color: white;">
+                Events
+            </h1>
+            <!-- <p class="subtext editable">
+                <br>
+                Educational events meant to inform attendees about business & technological subjects.  Plus networking events to connect students with todays' leaders.
+                <br><br>
+            </p> -->
+        </div>
+    </div>
+    <div class="learn-more">
+        <div id="particles-js">
+            <script src="particles.js"> 
+            // Don't touch
+            </script>
+            <script src="app.js">
+            </script>
+        </div>
+        <a href="#view-events" class="button hvr-float">
+            View Events
+            <span class="arrow">
+                ▼
+            </span>
+        </a>
+    </div>
+</section>
+<div class="content" id="view-events">
+
+    <!--Upcoming Events-->
+    <!-- Remember to set the first three event IDs to event-1, event-2,event-3 so it links from homepage -->
+    <div class="upcoming-events-text" style="padding-top: 40px">
+        <h2 data-aos="fade-up" class="editable">
+                Upcoming Events
+        </h2>
+    </div>
+
+    <!--Line break-->
+
+    {% for event in site.events %}
+            <div class="event-page-container">
+                <div class="container-row" {% if event.upcoming %} id="{{ event.upcoming }}" {% endif %}>
+                    <div data-aos="fade-up" class="event-page-info">
+                        <div class="event-page-column" style="width: 500px">
+                            <div class="event-image">
+                                <span class="lw_item_thumb">
+                                    <img height="250" src="{{ site.baseurl }}/images/events/mini/{{ event.image }}" width="500" style="padding-bottom:1em">
+                                    </img>
+                                </span>
+                            </div>
+                            <!-- <div class="event-date" data-date="Thurs 16 Jan 2020 CDT" style="padding-left:0.6em" >
+                                {{ event.date }}
+                            </div> -->
+                            <div class="event-date" style="padding-left:0.6em" >
+                                {{ event.day }}
+                            </div>
+            
+                        <div>
+                        <h2 class="event-title" style="font-size: 40px;padding-left:0.22em">
+                            {{ event.title }}
+                        </h2>
+                        </div>
+                    
+                        <div class="time-place" style="padding-left:1em">
+                            <!-- <div class="event-time" data-end-date="until 10:30 am" data-end-time="10:30 am" data-repeats=" " data-repeats-from=" " data-repeats-until=" " data-start-date="Fri 19 Jul 2019 PDT" data-start-time="12:00 am"> -->
+                            <div class="event-time">
+                                {{ event.time }} 
+                            </div>
+                            <div class="event-place" style="margin-bottom: 20px" style="padding-left:1em">
+                                {{ event.location }}
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div data-aos="fade-up" class="text" style="padding-top:20px">
+                        <p class="editable event-page-description" style="font-size: 20px">
+                            {{ event.description }} 
+                        </p>
+        
+                        <p style="font-size: 20px"> 
+                            {% if event.sponsor %}
+                            <b><u>Sponsors</u></b>
+                            <br />
+                            <b>Gold</b> Investors Group
+                            <br />
+                            <b>Silver</b> Bison Transport, IIBA
+                            <br />
+                            <b>Bronze</b> Integrationworx, Birchwood
+                            {% endif %}
+
+                            {% if event.signup %}
+                            <p><a href = "https://hopin.com/events/biztek2021">Sign up now!</a></p>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                <hr size="1" width="100%">
+                </hr>
+            </div>
+    {% endfor %}
+    <!-- Completed events -->
+    <div class="upcoming-events-text" style="padding-top: 40px">
+        <h2 data-aos="fade-up" class="editable">
+                Completed Events
+        </h2>
+    </div>
+</div>

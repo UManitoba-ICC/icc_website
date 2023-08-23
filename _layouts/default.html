@@ -1,0 +1,146 @@
+<!-- Header logo changes here -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+		{% feed_meta %}
+
+		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+
+		<script src="https://kit.fontawesome.com/ba8739a550.js"></script>
+		<script src="//code.jquery.com/jquery-latest.js"></script>
+		<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Rubik:300">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Heebo:100,400,500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
+		<!-- Button hover effects -->
+		<link href="{{ site.baseurl }}/css/hover.css" rel="stylesheet" media="all">
+		<!-- Lightbox for team page -->
+		<link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+		<!-- Animated hamburger menu -->
+		<link href="{{ site.baseurl }}/css/hamburgers.css" rel="stylesheet">
+		<!-- Animated reveal on scroll -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- Css typing effect -->
+		<link href="{{ site.baseurl }}/css/css-typing.css" rel="stylesheet">
+
+
+		<!-- Added by Kevin -->
+		<!-- Please refer to analytics.html file in _include directory -->
+		{% if site.google_analytics and jekyll.environment == 'production' %}
+		{% include analytics.html %}
+		{% endif %}
+
+		<!-- {% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
+			<script>
+				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+				ga('create', '{{ site.google_analytics_key }}', 'auto');
+				ga('send', 'pageview');
+			</script>
+			<script async src='https://www.google-analytics.com/analytics.js'></script>
+		{% endif %} -->
+	</head>
+
+	<body>
+		
+		<header id="mainHeader">
+			<div class="container">
+				<div class="company-name">
+					<a href="/">
+						<span><img width="104" height="38" src="/images/logo/header-logo1.png" alt="logo"></span>
+						<!-- <span class="dark-logo"><img width="104" height="38" src="/images/logo/header-logo2.png" alt="dark logo"></span> -->
+						<!-- <span class="light-logo"><img width="104" height="38" src="/images/logo/header-logo1.png" alt="light logo"></span> -->
+					</a>
+				</div>
+				<nav>
+					<a class="nav-toggle hamburger hamburger--spin" id="open-nav" href="#">
+						<div class="hamburger-box" >
+							<div class="hamburger-inner"></div>
+						</div>
+					</a>
+			
+					<a href="/about/" class="" >About</a>
+					<a href="/events/" class="" >Events</a>
+					<a href="/team/" class="" >Team</a>
+					<a href="/resources/" class="" >Resources</a>
+				</nav>
+
+				<script>
+				/**
+				 * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+				 *
+				 * @private
+				 * @author Todd Motto
+				 * @link https://github.com/toddmotto/foreach
+				 * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+				 * @callback requestCallback      callback   - Callback function for each iteration.
+				 * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+				 * @returns {}
+				 */
+					var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+					var hamburgers = document.querySelectorAll(".hamburger");
+					if (hamburgers.length > 0) {
+					forEach(hamburgers, function(hamburger) {
+						hamburger.addEventListener("click", function() {
+						this.classList.toggle("is-active");
+						}, false);
+					});
+					}
+				</script>
+			</div>
+		</header>
+
+
+		{{ content }}
+
+		<footer>
+			<div class="container">
+				<ul class="footer-left-links">
+					{% for link in site.data.footer.left_links %}
+						<li>
+							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+								{{ link.name }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="footer-right-links">
+					{% for link in site.data.footer.right_links %}
+						<li>
+							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
+								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
+								{{ link.name }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<!-- <p class="copyright"> -->
+					<a href="">
+						ICC 2023 &copy; University of Manitba
+					</a>
+				<!-- </p> -->
+			</div>
+		</footer>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="{{ site.baseurl }}/js/main.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  		<script>
+    		AOS.init();
+  		</script>
+	</body>
+</html>

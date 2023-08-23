@@ -1,0 +1,311 @@
+---
+title: Team
+description: We've built an amazing team of developers, marketers, designers and business students to bring MISA to life.
+---
+<!-- This file allows us to customize the layout of the team page -->
+<!-- hero image section -->
+<section class="hero" style="background-image: url({{ site.baseurl }}/images/background/aboutus.webp)">
+    <div class="inner-hero text-container">
+        <div class="hero-text-container">
+            
+            <div style="background: #7F5B53;border: 1px solid #7F5B53;margin: 3%;">
+                <h1 class="editable module" style="font-size: 5.8em; color: white;">
+                    Team
+                </h1>
+            </div>
+            <p class="subtext editable module" style="font-size: 0.8em; margin: 3%;">
+                <br> We've built an amazing team of passionate individuals, leaders, developers, marketers, designers and International Students to bring ICC to life.<br><br><br>
+            </p> 
+        </div>
+    </div>
+    <div class="learn-more">
+        <a href="#view-team" class="button hvr-float">
+            View Team
+            <span class="arrow">
+                ▼
+            </span>
+        </a>
+
+    </div>
+    </div>
+</section>
+
+<!-- team section -->
+<section class="pad" id="view-team">
+    {% for person in site.team %}
+        {% if person.persons == "one" %}
+            <div>
+                <ul class="staff">
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image }})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox }}" href="">
+                                {{ person.name }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr width="50%"></hr>
+
+        {% elsif person.persons == "two" %}
+            <div>   
+                <ul class="staff">
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image }})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox }}" href="">
+                                {{ person.name }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox2 }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image2}})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox2 }}" href="">
+                                {{ person.name2 }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title2 }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin2 %}<a class="social-button linkedin" href="{{ person.linkedin2 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email2 %}<a class="social-button email" href="mailto:{{ person.email2 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram2 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram2 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github2 %}<a class="social-button github" href="https://github.com/{{ person.github2 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr width="50%"></hr>
+
+        {% elsif person.persons == "three" %}
+            <div>   
+                <ul class="staff">
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image }})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox }}" href="">
+                                {{ person.name }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox2 }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image2}})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox2 }}" href="">
+                                {{ person.name2 }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title2 }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin2 %}<a class="social-button linkedin" href="{{ person.linkedin2 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email2 %}<a class="social-button email" href="mailto:{{ person.email2 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram2 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram2 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github2 %}<a class="social-button github" href="https://github.com/{{ person.github2 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+
+                    <li div data-aos="fade-up">
+                        <a data-featherlight="#{{ person.lightbox3 }}" href="">
+                            <div class="square-image button hvr-float" style="background-image: url({{ site.baseurl }}/images/Team/{{ person.image3 }})">
+                            </div>
+                        </a>
+                        <div class="name">
+                            <a data-featherlight="#{{ person.lightbox3 }}" href="">
+                                {{ person.name3 }}
+                            </a>
+                        </div>
+                        <div class="position">
+                            {{ person.title3 }}
+                        </div>
+                        <div class="rounded-social-buttons">
+                            {% if person.linkedin3 %}<a class="social-button linkedin" href="{{ person.linkedin3 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.email3 %}<a class="social-button email" href="mailto:{{ person.email3 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                            {% if person.instagram3 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram3 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                            {% if person.github3 %}<a class="social-button github" href="https://github.com/{{ person.github3 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr width="50%"></hr>
+        {% endif %}
+    {% endfor %}
+</section>
+
+
+// LIGHTBOXES
+
+
+{% for person in site.team %}
+        {% if person.persons == "one" %}
+
+            <div class="lightbox" id="{{ person.lightbox }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image }}">
+                    <h2>
+                        {{ person.name }}
+                    </h2>
+                    <h3>
+                        {{ person.title }}
+                    </h3>
+                    <p>
+                        {{ person.bio }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+
+        {% elsif person.persons == "two" %}
+            
+            <div class="lightbox" id="{{ person.lightbox }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image }}">
+                    <h2>
+                        {{ person.name }}
+                    </h2>
+                    <h3>
+                        {{ person.title }}
+                    </h3>
+                    <p>
+                        {{ person.bio }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+            <div class="lightbox" id="{{ person.lightbox2 }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image2 }}">
+                    <h2>
+                        {{ person.name2 }}
+                    </h2>
+                    <h3>
+                        {{ person.title2 }}
+                    </h3>
+                    <p>
+                        {{ person.bio2 }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin2 %}<a class="social-button linkedin" href="{{ person.linkedin2 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email2 %}<a class="social-button email" href="mailto:{{ person.email2 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram2 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram2 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github2 %}<a class="social-button github" href="https://github.com/{{ person.github2 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+
+        {% elsif person.persons == "three" %}
+            <div class="lightbox" id="{{ person.lightbox }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image }}">
+                    <h2>
+                        {{ person.name }}
+                    </h2>
+                    <h3>
+                        {{ person.title }}
+                    </h3>
+                    <p>
+                        {{ person.bio }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin %}<a class="social-button linkedin" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email %}<a class="social-button email" href="mailto:{{ person.email }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github %}<a class="social-button github" href="https://github.com/{{ person.github }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+
+            <div class="lightbox" id="{{ person.lightbox2 }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image2 }}">
+                    <h2>
+                        {{ person.name2 }}
+                    </h2>
+                    <h3>
+                        {{ person.title2 }}
+                    </h3>
+                    <p>
+                        {{ person.bio2 }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin2 %}<a class="social-button linkedin" href="{{ person.linkedin2 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email2 %}<a class="social-button email" href="mailto:{{ person.email2 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram2 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram2 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github2 %}<a class="social-button github" href="https://github.com/{{ person.github2 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+            <div class="lightbox" id="{{ person.lightbox3 }}">
+                <img class="lightbox-image" src="{{ site.baseurl }}/images/Team/{{ person.image3 }}">
+                    <h2>
+                        {{ person.name3 }}
+                    </h2>
+                    <h3>
+                        {{ person.title3 }}
+                    </h3>
+                    <p>
+                        {{ person.bio3 }}
+                    </p>
+                    <div class="rounded-social-buttons">
+                        {% if person.linkedin3 %}<a class="social-button linkedin" href="{{ person.linkedin3 }}" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.email3 %}<a class="social-button email" href="mailto:{{ person.email3 }}?Subject=ICC%20Inquiry%20-From Website" target="_blank" rel="noopener noreferrer"></a> {% endif %}
+                        {% if person.instagram3 %}<a class="social-button instagram" href="https://www.instagram.com/{{ person.instagram3 }}/" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                        {% if person.github3 %}<a class="social-button github" href="https://github.com/{{ person.github3 }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
+                    </div>
+                </img>
+            </div>
+        {% endif %}
+    {% endfor %}
